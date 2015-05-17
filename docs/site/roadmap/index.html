@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+
+	<title>Roadmap - Flatsheet</title>
+
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+        <link href="../css/base.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="..">Flatsheet</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="..">Home</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../code-of-coundct/">Code of coundct</a>
+                </li>
+            
+            
+            
+                <li class="active">
+                    <a href="./">Roadmap</a>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li >
+                    <a rel="next" href="../code-of-coundct/">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li class="disabled">
+                    <a rel="prev" >
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://github.com/flatsheet/flatsheet/">
+                        
+                            <i class="fa fa-github"></i>
+                        
+                        GitHub
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#flatsheet-v10-roadmap">Flatsheet v1.0 Roadmap</a></li>
+        
+            <li><a href="#refactor-backend">Refactor backend</a></li>
+        
+            <li><a href="#concurrent-editing">Concurrent editing</a></li>
+        
+            <li><a href="#collaborators">Collaborators</a></li>
+        
+            <li><a href="#filter-results">Filter results</a></li>
+        
+            <li><a href="#web-forms">Web forms</a></li>
+        
+            <li><a href="#show-view">Show view</a></li>
+        
+            <li><a href="#package-flatsheet-for-easy-deployment">Package Flatsheet for easy deployment</a></li>
+        
+            <li><a href="#documentation">Documentation</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="flatsheet-v10-roadmap">Flatsheet v1.0 Roadmap</h1>
+<p>A plan for Flatsheet v1.0. This document is still a work in progress. Feedback in the <a href="https://github.com/flatsheet/flatsheet.github.io/issues">GitHub issues queue for this site</a> or sent to hi@flatsheet.io is welcome.</p>
+<h2 id="refactor-backend">Refactor backend</h2>
+<ul>
+<li>Switch to using dat repos to store sheet data</li>
+</ul>
+<h2 id="concurrent-editing">Concurrent editing</h2>
+<ul>
+<li>Show fields that collaborators are currently editing</li>
+<li>Track which users edited which fields / track versions</li>
+<li>This feature will require some significant refactoring / replacement of components of the initial prototype.</li>
+</ul>
+<h2 id="collaborators">Collaborators</h2>
+<ul>
+<li>Add collaborators to a sheet</li>
+<li>Find by username</li>
+<li>Invite via email with token param on signup url</li>
+<li>Option to make sheet publicly editable</li>
+</ul>
+<h2 id="filter-results">Filter results</h2>
+<ul>
+<li>Add filter, sort, reverse parameters to API endpoint for sheet to determine which rows are returned.</li>
+</ul>
+<h2 id="web-forms">Web forms</h2>
+<ul>
+<li>Allow each sheet to have a web form that can be embedded on other sites for the purpose of collecting data.</li>
+</ul>
+<h2 id="show-view">Show view</h2>
+<ul>
+<li>Create simple show view of sheet with links to downloads, API endpoint, and editor.</li>
+</ul>
+<h2 id="package-flatsheet-for-easy-deployment">Package Flatsheet for easy deployment</h2>
+<ul>
+<li>Research deployment options that Flatsheet will build for and support, decide on one or two (likely AMI and Heroku)</li>
+<li>Ensure it's easy for organizations to spin up an internal instance of Flatsheet</li>
+</ul>
+<h2 id="documentation">Documentation</h2>
+<ul>
+<li>Getting started guide</li>
+<li>Editor usage</li>
+<li>API docs</li>
+<li>API client usage examples</li>
+</ul></div>
+        </div>
+
+        
+
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script>
+        <script src="../js/base.js"></script>
+    </body>
+</html>

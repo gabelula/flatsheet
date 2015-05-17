@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="./img/favicon.ico">
+
+	<title>Flatsheet</title>
+
+        <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="./css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="./css/highlight.css">
+        <link href="./css/base.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href=".">Flatsheet</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li class="active">
+                    <a href=".">Home</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="code-of-coundct/">Code of coundct</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="roadmap/">Roadmap</a>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li class="disabled">
+                    <a rel="next" >
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="code-of-coundct/">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://github.com/flatsheet/flatsheet/">
+                        
+                            <i class="fa fa-github"></i>
+                        
+                        GitHub
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#welcome-to-flatsheet">Welcome to FlatSheet</a></li>
+        
+            <li><a href="#why-to-use-flatsheet">Why to use flatsheet?</a></li>
+        
+            <li><a href="#how-to-use-it">How to use it?</a></li>
+        
+            <li><a href="#project-layout">Project layout</a></li>
+        
+            <li><a href="#installing-locally">Installing Locally</a></li>
+        
+            <li><a href="#deployment-and-customization">Deployment and Customization</a></li>
+        
+            <li><a href="#roadmap">Roadmap</a></li>
+        
+            <li><a href="#contributing">Contributing</a></li>
+        
+    
+        <li class="main "><a href="#how-to-contribute">How to contribute</a></li>
+        
+    
+        <li class="main "><a href="#steps-to-contribute-writing-code">Steps to contribute writing code</a></li>
+        
+    
+        <li class="main "><a href="#steps-to-contributing-writing-documentation">Steps to contributing writing documentation</a></li>
+        
+    
+        <li class="main "><a href="#steps-to-contribute-submitting-bugs">Steps to contribute submitting bugs</a></li>
+        
+            <li><a href="#credits">Credits</a></li>
+        
+            <li><a href="#sponsor">Sponsor</a></li>
+        
+            <li><a href="#license">License</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="welcome-to-flatsheet">Welcome to FlatSheet</h1>
+<p>Flatsheet is a realtime editor for curating spreadsheets as a team. You can read about it at http://flatsheet.io</p>
+<h2 id="why-to-use-flatsheet">Why to use flatsheet?</h2>
+<h2 id="how-to-use-it">How to use it?</h2>
+<h2 id="project-layout">Project layout</h2>
+<pre><code>app.js        #
+package.js    # Dependencies and running scripts
+handlers/
+docs/
+    index.md  # The documentation homepage.
+    ...       # Other markdown pages, images and other files.
+lib/
+models/
+public/
+routes/
+tests/
+views/
+</code></pre>
+<h2 id="installing-locally">Installing Locally</h2>
+<p>Cloning the repo is best for testing things out &amp; developing flatsheet, but works fine for other purposes. You just have to be prepared to manually pull &amp; merge changes to your server.</p>
+<h3 id="clone-and-install">Clone and install</h3>
+<ul>
+<li>clone this repo: <code>git clone git@github.com:flatsheet/flatsheet.git</code></li>
+<li>change directory: <code>cd flatsheet</code></li>
+<li>run <code>npm install</code></li>
+</ul>
+<h3 id="create-an-admin-user">Create an admin user</h3>
+<ul>
+<li>create an admin account by running <code>npm run flatsheet accounts create-admin</code>. You'll be prompted for email, username, &amp; password.</li>
+<li>You can run <code>npm run flatsheet accounts list</code> to see that your admin account was created.</li>
+</ul>
+<h3 id="start-the-server">Start the server</h3>
+<ul>
+<li>Now run <code>npm start</code> to start the server.</li>
+<li>In development you can watch the css &amp; js using <code>npm run watch</code>.</li>
+<li>In development you can debug running <code>npm run-script debug</code>. You add breakpoints in the code with <code>debugger</code></li>
+<li>Go to <code>http://127.0.0.1:3333</code> and log in with the admin account credentials.</li>
+</ul>
+<h2 id="deployment-and-customization">Deployment and Customization</h2>
+<p>This is a good option for when you're using flatsheet in production, because you can make use of npm to install and update flatsheet.</p>
+<h3 id="steps">Steps:</h3>
+<ul>
+<li>Create a directory name <code>flatsheet</code> for your project (or whatever you like)</li>
+<li>Change directory <code>cd flatsheet</code></li>
+<li>Create a package.json file with <code>npm init</code></li>
+<li>Install flatsheet with npm: <code>npm install flatsheet --save</code></li>
+<li>Install the response module: <code>npm install response --save</code></li>
+</ul>
+<h3 id="filefolder-setup">File/folder setup</h3>
+<ul>
+<li>Create a folder named <code>data</code>: <code>mkdir data</code></li>
+<li>Create a app.js file with this code:</li>
+</ul>
+<pre><code class="javascript">var server = require('flatsheet')({
+  site: {
+    title: 'flatsheet',
+    email: 'hi@example.com',
+    url: 'http://127.0.0.1:3333',
+    contact: 'your full name'
+  },
+  db: __dirname + '/data'
+});
+
+server.listen();
+</code></pre>
+
+<ul>
+<li>Create a .env file for secret config like sendgrid username/password:</li>
+</ul>
+<pre><code>SENDGRID_USER=yourusername
+SENDGRID_PASS=yourpassword
+</code></pre>
+
+<ul>
+<li>Add a <code>flatsheet</code> script and a <code>start</code> script to the <code>scripts</code> field in your package.json file:</li>
+</ul>
+<pre><code class="json">&quot;scripts&quot;: {
+  &quot;flatsheet&quot;: &quot;flatsheet&quot;,
+  &quot;start&quot;: &quot;node app.js&quot;
+},
+</code></pre>
+
+<ul>
+<li>So your full package.json file should look something like this:</li>
+</ul>
+<p><code>{
+  "name": "flatsheet-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "flatsheet": "flatsheet",
+    "start": "node app.js"
+    },
+    "author": "",
+    "license": "ISC"
+  }</code></p>
+<h3 id="create-an-admin-user_1">Create an admin user</h3>
+<ul>
+<li>Create an admin account by running <code>npm run flatsheet accounts create-admin</code>. You'll be prompted for email, username, &amp; password.</li>
+<li>You can run <code>npm run flatsheet accounts list</code> to see that your admin account was created.</li>
+</ul>
+<h3 id="customize">Customize</h3>
+<h3 id="configure-web-server">Configure web server</h3>
+<h3 id="invite-users">Invite users</h3>
+<ul>
+<li>Navigate to <code>http://127.0.0.1:3333/accounts/invite</code></li>
+<li>Enter email addresses, one address per line</li>
+<li>Click "Send invitation"</li>
+<li>Users will receive an email with a link they can click to create accounts</li>
+</ul>
+<h2 id="roadmap">Roadmap</h2>
+<p>http://flatsheet.io/roadmap</p>
+<h2 id="contributing">Contributing</h2>
+<p>Please contribute to this repository if any of the following is true:
+- You have expertise in community development, communication, or education
+- You want open source communities to be more collaborative and inclusive
+- You want to help lower the burden to first time contributors</p>
+<h1 id="how-to-contribute">How to contribute</h1>
+<p><strong>Prerequisites:</strong><br />
+- Familiarity with <a href="https://help.github.com/articles/using-pull-requests">GitHub PRs</a> (pull requests) and issues.
+- Knowledge of <a href="https://help.github.com/articles/markdown-basics/">markdown</a> for editing <code>.md</code> documents.
+- Experience with or interest in learning JavaScript.</p>
+<p><strong>In particular, this community seeks the following types of contributions:</strong>
+- ideas: participate in an issues thread or start your own to have your voice heard.
+- design: create mockups &amp; prototypes
+- write: contribute your expertise in an area by helping us expand the included content
+- copy editing: fix typos, clarify language, and generally improve the quality of the content
+- formatting: help keep content easy to read with consistent formatting
+- code: fix issues or contribute new features to this or any related projects</p>
+<h1 id="steps-to-contribute-writing-code">Steps to contribute writing code</h1>
+<ul>
+<li>Tasks are run using npm run scripts. Review the scripts object in the package.json file for details.</li>
+<li>Files in the <code>public</code> directory are generated by npm scripts</li>
+<li>Fork this repository.</li>
+<li>Run <code>npm install</code></li>
+<li>Run <code>npm run watch</code> to build css &amp; browser js</li>
+<li>Run <code>npm start</code> to start the server</li>
+<li>Create a branch for your changes</li>
+<li>Include tests if applicable</li>
+<li>Add/edit documentation for any changes</li>
+<li>Submit a pull request</li>
+</ul>
+<h1 id="steps-to-contributing-writing-documentation">Steps to contributing writing documentation</h1>
+<ul>
+<li>http://docs.readthedocs.org/en/latest/getting_started.html</li>
+</ul>
+<h1 id="steps-to-contribute-submitting-bugs">Steps to contribute submitting bugs</h1>
+<ul>
+<li><strong><a href="http://github.com/flatsheet">flatsheet on Github</a></strong></li>
+<li><strong><a href="http://github.com/flatsheet/flatsheet/issues">Discussions, tasks, and issue reporting</a></strong></li>
+<li><strong><a href="https://gitter.im/flatsheet/flatsheet">Chat on Gitter</a></strong></li>
+</ul>
+<p>GitHub issues are the primary way for communicating about specific proposed
+changes to this project.</p>
+<p>In both contexts, please follow the conduct guidelines. Language issues
+are often contentious and we'd like to keep discussion brief, civil and focused
+on what we're actually doing, not wandering off into too much imaginary stuff.</p>
+<h2 id="credits">Credits</h2>
+<p>Seth Vincent</p>
+<h2 id="sponsor">Sponsor</h2>
+<p>This project is supported in part by a <a href="http://opennews.org/codesprints.html">code sprint grant from OpenNews</a>.</p>
+<p>More info <a href="http://flatsheet.io/blog/getting-flatsheet-to-v1-with-help-from-opennews/">at the Flatsheet blog</a>.</p>
+<h2 id="license">License</h2>
+<p><a href="LICENSE.md">MIT</a></p></div>
+        </div>
+
+        
+
+        <script src="./js/jquery-1.10.2.min.js"></script>
+        <script src="./js/bootstrap-3.0.3.min.js"></script>
+        <script src="./js/highlight.pack.js"></script>
+        <script src="./js/base.js"></script>
+    </body>
+</html>
