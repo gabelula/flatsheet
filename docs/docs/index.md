@@ -6,6 +6,11 @@ Flatsheet is a realtime editor for curating spreadsheets as a team. You can read
 
 ## How to use it?
 
+
+## Demo
+
+You can try it at [Public shared sheets](https://app.flatsheet.io/sheet/bbn6_tq9_qcqcfb6yi1w-g)
+
 ## Project layout
 
     app.js        #
